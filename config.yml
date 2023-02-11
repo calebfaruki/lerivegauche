@@ -3,12 +3,3 @@ backend:
   repo: calebfaruki/lerivegauche # Path to your Github/Gitlab repository
   branch: main # Branch to update
   base_url: https://lerivegaucheparis.fr
-collections:
-  - name: "posts"
-    label: "Post"
-    folder: "_posts"
-    filter:
-      field: language
-      value: en
-    fields:
-      - { label: "Language", name: "language" }
