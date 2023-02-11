@@ -1,5 +1,0 @@
-backend:
-  name: github
-  repo: calebfaruki/lerivegauche # Path to your Github/Gitlab repository
-  branch: main # Branch to update
-  base_url: https://lerivegaucheparis.fr
