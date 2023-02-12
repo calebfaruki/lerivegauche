@@ -1,19 +1,18 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: calebfaruki/lerivegaucheparis
+  base_url: https://lerivegaucheparis.fr
+  auth_endpoint: auth
   branch: main
   url: http://localhost:3000
 media_folder: "public/assets" # Folder where user uploaded files should go
 public_folder: "assets"
-production:
-  backend:
-    name: github
-    repo: calebfaruki/lerivegauche # Path to your Github/Gitlab repository
-    branch: main # Branch to update
-    base_url: https://lerivegaucheparis.fr
 collections: # A list of collections the CMS should be able to edit
-  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "posts" # The path to the folder where the documents are stored
+  - name: "menus" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Menu" # Used in the UI, ie.: "New Post"
+    folder: "menus" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    media_folder: "" # Save images in the post's own folder instead of the public folder
+    public_folder: ""
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string" }
