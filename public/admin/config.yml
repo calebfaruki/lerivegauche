@@ -1,8 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
-  # repo: calebfaruki/lerivegaucheparis
-  # base_url: https://lerivegaucheparis.fr
+  repo: calebfaruki/lerivegauche
+  base_url: https://netlify-cms.adrianub.vercel.app
   # auth_endpoint: api/auth/signin
   # url: https://lerivegaucheparis.fr
 media_folder: public/assets # Folder where user uploaded files should go
