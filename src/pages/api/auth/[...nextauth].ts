@@ -12,6 +12,7 @@ export const authOptions: NextAuthOptions = {
   theme: {
     colorScheme: "light",
   },
+  secret: process.env.NEXT_AUTH_SECRET,
 };
 
 export default NextAuth(authOptions);
