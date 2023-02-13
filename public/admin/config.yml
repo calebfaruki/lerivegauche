@@ -1,10 +1,10 @@
 backend:
-  name: github
-  repo: calebfaruki/lerivegaucheparis
-  base_url: https://lerivegaucheparis.fr
-  auth_endpoint: api/auth/signin
+  name: git-gateway
   branch: main
-  url: https://lerivegaucheparis.fr
+  # repo: calebfaruki/lerivegaucheparis
+  # base_url: https://lerivegaucheparis.fr
+  # auth_endpoint: api/auth/signin
+  # url: https://lerivegaucheparis.fr
 media_folder: public/assets # Folder where user uploaded files should go
 public_folder: assets
 collections: # A list of collections the CMS should be able to edit
