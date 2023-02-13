@@ -2,7 +2,7 @@ backend:
   name: github
   repo: calebfaruki/lerivegaucheparis
   base_url: https://lerivegaucheparis.fr
-  auth_endpoint: api/auth
+  auth_endpoint: api/auth/signin
   branch: main
 media_folder: public/assets # Folder where user uploaded files should go
 public_folder: assets
