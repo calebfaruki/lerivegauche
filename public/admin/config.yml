@@ -4,6 +4,7 @@ backend:
   base_url: https://lerivegaucheparis.fr
   auth_endpoint: api/auth/signin
   branch: main
+  url: https://lerivegaucheparis.fr
 media_folder: public/assets # Folder where user uploaded files should go
 public_folder: assets
 collections: # A list of collections the CMS should be able to edit
