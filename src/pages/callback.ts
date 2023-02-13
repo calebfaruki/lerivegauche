@@ -1,10 +1,10 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { IncomingMessage, ServerResponse } from "http";
 import { AuthorizationCode } from "simple-oauth2";
 import config from "@/lib/config";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<unknown>
+export default async function Callback(
+  req: IncomingMessage,
+  res: ServerResponse
 ) {
   const { host } = req.headers;
   const url = new URL(`https://${host}/${req.url}`);
