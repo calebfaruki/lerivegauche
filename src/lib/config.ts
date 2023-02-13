@@ -1,8 +1,8 @@
 import { ModuleOptions } from "simple-oauth2";
 
 const client = {
-  id: process.env.OAUTH_GITHUB_CLIENT_ID,
-  secret: process.env.OAUTH_GITHUB_CLIENT_SECRET,
+  id: process.env.OAUTH_CLIENT_ID,
+  secret: process.env.OAUTH_CLIENT_SECRET,
 };
 
 const auth = {
@@ -13,7 +13,7 @@ const auth = {
 
 const config: ModuleOptions = {
   client: {
-    id: process.env.OAUTH_GITHUB_CLIENT_ID as string,
+    id: process.env.OAUTH_CLIENT_ID as string,
     secret: client.secret as string,
   },
   auth: {
