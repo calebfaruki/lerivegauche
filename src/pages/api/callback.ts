@@ -1,10 +1,10 @@
-import { IncomingMessage, ServerResponse } from "http";
+import { NextApiRequest, NextApiResponse } from "next";
 import { AuthorizationCode } from "simple-oauth2";
 import config from "@/lib/config";
 
-export default async function Callback(
-  req: IncomingMessage,
-  res: ServerResponse
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<unknown>
 ) {
   const { host } = req.headers;
   const url = new URL(`https://${host}/${req.url}`);
@@ -16,6 +16,8 @@ export default async function Callback(
     code,
     redirect_uri: `https://${host}/callback?provider=${provider}`,
   };
+
+  console.log(tokenParams.redirect_uri);
 
   try {
     const accessToken = await client.getToken(tokenParams);

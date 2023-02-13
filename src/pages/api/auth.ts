@@ -1,12 +1,7 @@
-import { IncomingMessage, ServerResponse } from "http";
+import { NextApiRequest, NextApiResponse } from "next";
 import { AuthorizationCode } from "simple-oauth2";
 import { randomBytes } from "crypto";
 import config from "@/lib/config";
-import { NextApiRequest, NextApiResponse } from "next";
-
-export const randomString = () => randomBytes(4).toString("hex");
-
-const scopes = "repo,user";
 
 export default function handler(
   req: NextApiRequest,
@@ -21,8 +16,8 @@ export default function handler(
 
   const authorizationUri = client.authorizeURL({
     redirect_uri: `https://${host}/callback?provider=${provider}`,
-    scope: scopes,
-    state: randomString(),
+    scope: "repo,user",
+    state: randomBytes(4).toString("hex"),
   });
 
   res.writeHead(301, { Location: authorizationUri });
